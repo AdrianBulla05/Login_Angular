@@ -1,0 +1,15 @@
+<h1>Iniciar sesión</h1>
+<form (ngSubmit)="login()" #loginForm="ngForm">
+    <!-- Formulario para hacer el login -->
+    <div>
+        <label for="">Correo Electronico</label>
+        <input type="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div>
+        <label for="">Contraseña</label>
+        <input type="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit" [disabled]="!loginForm.form.valid">
+        Iniciar Sesión
+    </button>
+</form>

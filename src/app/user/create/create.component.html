@@ -1,0 +1,22 @@
+
+<!-- Formulario para crear un usuario en la app -->
+
+<h1>Registrar usuario nuevo</h1>
+
+<form (ngSubmit)="createUser()" #createForm="ngForm">
+    <div>
+        <label for="">Usuario</label>
+        <input type="text" name="username" [(ngModel)]="username" required>
+    </div>
+    <div>
+        <label for="">Correo Electronico</label>
+        <input type="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div>
+        <label for="">Contraseña</label>
+        <input type="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit" [disabled]="!createForm.form.valid">
+        Registrarse aquí
+    </button>
+</form>
